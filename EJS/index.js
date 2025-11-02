@@ -54,6 +54,13 @@ app.get('/ig/:username', (req, res) => {
 
 // How to get Params
 
+app.get("/file/:name/:id", (req, res) => {
+  console.log(req.params);
+
+  const { name, id } = req.params;
+  res.send(`File Fetched :${name} id:${id}`);
+});
+
 
 
 
