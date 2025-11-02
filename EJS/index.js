@@ -48,8 +48,13 @@ app.get("/roller", (req, res) => {
 // Instagram Ejs
 
 app.get('/ig/:username', (req, res) => {
+  // Dummmy Data for EJS
+  const followers = ["Shayan", "Haroon", "Faisal", "Hamza"];
+
   const { username } = req.params;
-  res.render('instagram.ejs',{username})
+
+  // Passing the Username and Follower in EJS
+  res.render("instagram.ejs", { username, followers });
 })
 
 // How to get Params

@@ -7,7 +7,17 @@
   </head>
   <body>
     <h1>This Page Belongs to @<%= username %></h1>
-    <button>Follow</button>
-    <button>Message</button>
+    <button style="background-color: blue; padding: 10px 25px; color: white; border-radius: 10px;">Follow</button>
+    <button style="background-color: pink; padding: 10px 25px; color: black; border-radius: 10px;">Message</button>
+
+    <h2>Accounts that follow you</h2>
+
+    <!-- Using Loop -->
+    <ul>
+      <% for(let name of followers){%>
+      <li><%= name %></li>
+
+      <% } %>
+    </ul>
   </body>
 </html>
